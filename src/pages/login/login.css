@@ -9,6 +9,8 @@
   height: 60vh;
   border-radius: 10px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   padding: 7vw 5vw;
 }
@@ -23,14 +25,15 @@ h6 {
 .signinBtn {
   background-color: #19a7ce;
   box-shadow: 0 2px 5px #000000;
+  width: 66vw;
 }
 .signinBtn:hover {
   background-color: #21cfff;
 }
-.signupBtn {
+.signupLink {
   margin-left: 0.5em;
   font-size: 0.7em;
-  font-style: none;
+  text-decoration: none;
 }
 .errorAlert {
   font-size: 0.8em;

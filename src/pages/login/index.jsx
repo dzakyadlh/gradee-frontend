@@ -3,12 +3,11 @@ import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import { Alert, Button, FloatingLabel, Form } from "react-bootstrap";
 import axios from "axios";
-import "./style.css";
+import "./login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -22,6 +21,8 @@ const Login = () => {
     axios
       .post("http://localhost:5000/auth/login", payload)
       .then((res) => {
+        localStorage.setItem("id", res.data.data.username);
+        localStorage.setItem("email", res.data.data.username);
         localStorage.setItem("username", res.data.data.username);
         localStorage.setItem("token", res.data.data.token);
         console.log(res.data.status);
@@ -50,7 +51,6 @@ const Login = () => {
         >
           <Form.Control
             type="email"
-            placeholder="name@example.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -58,7 +58,6 @@ const Login = () => {
         <FloatingLabel controlId="floatingPassword" label="Password">
           <Form.Control
             type="password"
-            placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
             value={password}
             onKeyUp={handleEnter}
@@ -69,7 +68,7 @@ const Login = () => {
         </Button>
         <div className="d-flex">
           <h6>Don't have an account yet?</h6>
-          <a className="signupBtn" href="/register">
+          <a className="signupLink" href="/register">
             Sign Up
           </a>
         </div>
