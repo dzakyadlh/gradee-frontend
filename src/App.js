@@ -5,6 +5,7 @@ import "./App.css";
 import LandingPage from "./pages/landing";
 import Login from "./pages/login";
 import Register from "./pages/register";
+import Navbar from "./components/navbar";
 
 import { useNavigate } from "react-router";
 import { Route, Routes, Navigate } from "react-router-dom";
