@@ -1,0 +1,73 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.register-container {
+  width: 80vw;
+  height: 80vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 7vw 5vw;
+}
+h1 {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #19a7ce;
+}
+h6 {
+  font-size: 0.7em;
+}
+.signupBtn {
+  width: 74vw;
+  background-color: #19a7ce;
+  box-shadow: 0 2px 5px #000000;
+  font-size: 1em;
+}
+.signupBtn:hover {
+  background-color: #21cfff;
+}
+.errorAlert {
+  font-size: 0.8em;
+  padding: 3vw;
+}
+.checkbox-control {
+  font-size: 0.7em;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-control input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.checkbox-control label {
+  margin-left: 5px;
+}
+
+.checkbox-control label:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border: 2px solid #666;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+.checkbox-control input[type="checkbox"]:checked + label:before {
+  content: "\2713";
+  text-align: center;
+  color: #fff;
+  background-color: #666;
+}
+
+.agreements {
+  font-size: 0.7em;
+  text-decoration: none;
+}
