@@ -1,0 +1,47 @@
+.landingFirst {
+  margin-top: 64px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5vw;
+}
+/* .studyGirl {
+  animation-name: tilting;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+} */
+.landing-container h1 {
+  font-size: 3em;
+  line-height: 120%;
+  text-shadow: 20px 15px 10px #adadad;
+}
+.getStartedBtn {
+  margin-top: 6vh;
+  border-radius: 25px;
+  width: 50vw;
+  font-size: 1.3em;
+  background-color: #146c94;
+  box-shadow: 0 2px 5px #000000;
+}
+
+@keyframes tilting {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

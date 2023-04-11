@@ -1,0 +1,22 @@
+.nav-container {
+  position: sticky;
+  top: 0;
+  background-color: transparent;
+}
+.nav-brand {
+  color: #19a7ce;
+}
+.nav-link {
+  font-size: 0.8em;
+  padding-left: 1vw;
+}
+.nav-link:hover {
+  color: #19a7ce;
+  transition: 1s;
+  padding-left: 3vw;
+}
+.nav-droplink,
+.nav-logout {
+  background-color: transparent;
+  font-size: 0.8em;
+}
