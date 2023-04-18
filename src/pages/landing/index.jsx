@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import Navbar from "../../components/navbar";
+import Footer from "../../components/footer";
 import StudyGirl from "../../assets/casual-life-3d-girl-studying-with-book-and-laptop.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -76,6 +77,7 @@ const LandingPage = () => {
           </Swiper>
         </div>
       </div>
+      <Footer />
     </React.Fragment>
   );
 };
