@@ -1,10 +1,13 @@
 .nav-container {
-  position: sticky;
-  top: 0;
-  background-color: transparent;
+  position: fixed;
+  width: 100vw;
+  background-color: rgb(246, 241, 241, 0.9);
 }
 .nav-brand {
   color: #19a7ce;
+}
+.nav-collapse {
+  background-color: rgb(246, 241, 241, 0.9);
 }
 .nav-link {
   font-size: 0.8em;
@@ -17,6 +20,5 @@
 }
 .nav-droplink,
 .nav-logout {
-  background-color: transparent;
   font-size: 0.8em;
 }

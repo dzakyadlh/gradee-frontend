@@ -1,0 +1,58 @@
+.footer-container {
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 5vh 5vw 10vh;
+}
+
+.subfooter {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 40vw;
+  padding: 10px;
+}
+
+.subfooter h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.subfooter h3 {
+  font-size: 1em;
+  color: white;
+}
+
+.subfooter h5 {
+  color: white;
+  font-size: 0.5em;
+}
+
+.subfooter h6 {
+  margin-top: 20px;
+  color: #485d63;
+  font-size: 0.3em;
+}
+
+.subfooter ul {
+  display: flex;
+  margin: 10px 0;
+}
+
+.subfooter li {
+  margin-right: 5px;
+}
+
+.subfooter li .icon:hover {
+  color: #19a7ce !important;
+}
+
+.subfooter p {
+  font-size: 0.7em;
+  color: white;
+}
+
+#sf1 {
+  display: none;
+}

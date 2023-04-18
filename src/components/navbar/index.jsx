@@ -22,7 +22,7 @@ const NavigationBar = () => {
           Gradee
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav" className="nav-collapse">
           <Nav className="me-auto">
             <Nav.Link className="nav-link" href="/home">
               Home
