@@ -1,11 +1,11 @@
 .landingFirst {
-  margin-top: 64px;
   width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5vw;
+  padding: 0 5vw;
 }
 /* .studyGirl {
   animation-name: tilting;
@@ -19,6 +19,10 @@
   line-height: 120%;
   text-shadow: 20px 15px 10px #adadad;
 }
+.landing-container h2 {
+  font-size: 2em;
+  line-height: 120%;
+}
 .getStartedBtn {
   margin-top: 6vh;
   border-radius: 25px;
@@ -27,7 +31,55 @@
   background-color: #146c94;
   box-shadow: 0 2px 5px #000000;
 }
-
+.getStartedBtn:hover {
+  background-color: #126388;
+}
+.landingSecond {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 5vw;
+}
+.cardCarousel {
+  display: flex;
+  margin: 3vh 1vw;
+  width: 100%;
+}
+.discoverCard {
+  width: 30vw;
+  height: 50vw;
+  margin: 1vw;
+}
+.discoverCardTitle {
+  font-size: 0.7em;
+}
+.discoverCard .cardImg {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+.discoverCard .btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  padding: 0.2em;
+  border-radius: 25%;
+  width: 8vw;
+  height: 8vw;
+  border: none;
+  box-sizing: border-box;
+}
+.discoverCard .btn:hover {
+  width: 7vw;
+  height: 7vw;
+}
+.discoverCard .icon {
+  font-size: 0.8em;
+  color: #19a7ce;
+}
 @keyframes tilting {
   0% {
     transform: rotate(0deg);
