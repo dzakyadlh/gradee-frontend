@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 import { Alert, Button, FloatingLabel, Form } from "react-bootstrap";
 import axios from "axios";
 import "./register.css";
@@ -8,7 +9,6 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
   const [agree, setAgree] = useState(false);
   const navigate = useNavigate();
@@ -86,7 +86,7 @@ const Register = () => {
             <input type="checkbox" name="checkbox" onChange={handleAgree} />
             Agree to Terms & Conditions.
           </label>
-          <a className="agreements mx-1">Read more</a>
+          <Link className="agreements mx-1">Read more</Link>
         </div>
         <Button className="mt-3 mb-3 signupBtn" onClick={handleRegister}>
           Sign Up

@@ -68,9 +68,9 @@ const Login = () => {
         </Button>
         <div className="d-flex">
           <h6>Don't have an account yet?</h6>
-          <a className="signupLink" href="/register">
+          <Link to="/register" className="signupLink">
             Sign Up
-          </a>
+          </Link>
         </div>
         {error && (
           <Alert className="mt-4 errorAlert" variant="danger">
