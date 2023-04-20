@@ -8,14 +8,25 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./landing.css";
 import { Pagination } from "swiper";
-import { Button, Card, CardImg } from "react-bootstrap";
+import { Button, Card, CardImg, Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRight,
+  faBook,
+  faHardDrive,
+  faListCheck,
+  faPersonChalkboard,
+  faUserGraduate,
+} from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 
 const LandingPage = () => {
   const [courses, setCourses] = useState([]);
   const navigate = useNavigate();
+
+  const handleClick = (link) => {
+    navigate(link);
+  };
 
   const handleFetch = () => {
     axios
@@ -39,17 +50,108 @@ const LandingPage = () => {
       <Navbar />
       <div className="scroll-container landing-container">
         <div className="landingFirst">
-          <img src={StudyGirl} className="studyGirl"></img>
+          <img src={StudyGirl} className="studyGirl" alt="studygirl"></img>
           <h1>
             Improve your grades with <span className="gradee">Gradee</span>
           </h1>
-          <Button className="getStartedBtn">Get Started</Button>
+          <Button
+            className="getStartedBtn"
+            onClick={() => handleClick("/register")}
+          >
+            Get Started
+          </Button>
         </div>
         <div className="landingSecond">
+          <h2>Why us?</h2>
+          <Row id="lsRow1" className="lsRow">
+            <Col xs={1} className="me-1">
+              <h4>
+                <FontAwesomeIcon icon={faBook} />
+              </h4>
+            </Col>
+            <Col>
+              <h5>Comprehensive Curriculum</h5>
+            </Col>
+            <div id="lsDesc1" className="lsDesc">
+              <p>
+                The course curriculum is designed to cover all major aspects of
+                high school and university.
+              </p>
+            </div>
+          </Row>
+          <Row id="lsRow2" className="lsRow">
+            <Col xs={1} className="me-1">
+              <h4>
+                <FontAwesomeIcon icon={faPersonChalkboard} />
+              </h4>
+            </Col>
+            <Col>
+              <h5>Interactive Lessons</h5>
+            </Col>
+            <div id="lsDesc2" className="lsDesc">
+              <p>
+                Our lessons are interactive and engaging, incorporating
+                multimedia, discussions, and real-life examples to help you
+                improve better.
+              </p>
+            </div>
+          </Row>
+          <Row id="lsRow3" className="lsRow">
+            <Col xs={1} className="me-1">
+              <h4>
+                <FontAwesomeIcon icon={faListCheck} />
+              </h4>
+            </Col>
+            <Col>
+              <h5>Personalized Learning</h5>
+            </Col>
+            <div id="lsDesc3" className="lsDesc">
+              <p>
+                Learn at your own pace, allowing you to revisit concepts or
+                progress through the material based on your comfort level.
+              </p>
+            </div>
+          </Row>
+          <Row id="lsRow4" className="lsRow">
+            <Col xs={1} className="me-1">
+              <h4>
+                <FontAwesomeIcon icon={faUserGraduate} />
+              </h4>
+            </Col>
+            <Col>
+              <h5>Expert Instructors</h5>
+            </Col>
+            <div id="lsDesc4" className="lsDesc">
+              <p>
+                Our instructors are experienced educators with a passion for
+                their teachings. They provide clear explanations, answer
+                questions, and provide feedback.
+              </p>
+            </div>
+          </Row>
+          <Row id="lsRow5" className="lsRow">
+            <Col xs={1} className="me-1">
+              <h4>
+                <FontAwesomeIcon icon={faHardDrive} />
+              </h4>
+            </Col>
+            <Col>
+              <h5>Resources and Materials</h5>
+            </Col>
+            <div id="lsDesc5" className="lsDesc">
+              <p>
+                Access to a variety of resources, including downloadable study
+                materials, practice exercises, and reference materials.
+              </p>
+            </div>
+          </Row>
+        </div>
+        <div className="landingThird">
           <h2>Discover our courses</h2>
           <Swiper
-            slidesPerView={3}
+            slidesPerView={1}
             spaceBetween={10}
+            centeredSlides={true}
             pagination={{ clickable: true }}
             modules={[Pagination]}
             className="cardCarousel"
@@ -75,6 +177,7 @@ const LandingPage = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+          <p>Starts from $99 per month</p>
         </div>
       </div>
       <Footer />
