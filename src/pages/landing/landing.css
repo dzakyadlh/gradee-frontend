@@ -1,16 +1,15 @@
 .landingFirst,
 .landingSecond,
-.landingThird {
+.landingThird,
+.landingFourth {
   margin-bottom: 15vh;
 }
 .landingFirst {
-  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 5vw;
 }
 /* .studyGirl {
   animation-name: tilting;
@@ -44,7 +43,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 5vw;
 }
 .landingSecond h2 {
   margin-left: auto;
@@ -94,7 +92,6 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  padding: 5vw;
 }
 .landingThird p {
   font-size: 1em;
@@ -138,6 +135,29 @@
 .discoverCard .icon {
   font-size: 1em;
   color: #19a7ce;
+}
+.landingFourth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.landingFourth .fsRow {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.landingFourth h4 {
+  color: rgb(47, 255, 71);
+  font-size: 1.5em;
+}
+.landingFourth h5 {
+  font-size: 1em;
+}
+.landingFourth h6 {
+  margin: 20px auto;
+}
+.landingFourth .btn {
+  margin: 20px auto;
 }
 @keyframes tilting {
   0% {

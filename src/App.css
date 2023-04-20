@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  padding-top: 60px;
+  padding: 60px 5vw 0;
 }
 
 @font-face {

@@ -8,11 +8,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./landing.css";
 import { Pagination } from "swiper";
-import { Button, Card, CardImg, Container, Row, Col } from "react-bootstrap";
+import { Button, Card, CardImg, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
   faBook,
+  faCircleCheck,
   faHardDrive,
   faListCheck,
   faPersonChalkboard,
@@ -177,7 +178,62 @@ const LandingPage = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <p>Starts from $99 per month</p>
+        </div>
+        <div className="landingFourth">
+          <h2>
+            Join us now
+            <span>
+              <br></br>
+            </span>
+            and get access to:
+          </h2>
+          <Row className="fsRow">
+            <Col xs={1} className="me-1">
+              <h4>
+                <FontAwesomeIcon icon={faCircleCheck} />
+              </h4>
+            </Col>
+            <Col>
+              <h5>More than 100 videos of each subject</h5>
+            </Col>
+          </Row>
+          <Row className="fsRow">
+            <Col xs={1} className="me-1">
+              <h4>
+                <FontAwesomeIcon icon={faCircleCheck} />
+              </h4>
+            </Col>
+            <Col>
+              <h5>More than 1000 exercises on each subjects</h5>
+            </Col>
+          </Row>
+          <Row className="fsRow">
+            <Col xs={1} className="me-1">
+              <h4>
+                <FontAwesomeIcon icon={faCircleCheck} />
+              </h4>
+            </Col>
+            <Col>
+              <h5>Weekly quiz and challenges</h5>
+            </Col>
+          </Row>
+          <Row className="fsRow">
+            <Col xs={1} className="me-1">
+              <h4>
+                <FontAwesomeIcon icon={faCircleCheck} />
+              </h4>
+            </Col>
+            <Col>
+              <h5>Online mentors to help you 24/7</h5>
+            </Col>
+          </Row>
+          <h6>Starts from $29/month or $299/year</h6>
+          <Button
+            className="btn getStartedBtn"
+            onClick={() => handleClick("/register")}
+          >
+            Sign Up
+          </Button>
         </div>
       </div>
       <Footer />
