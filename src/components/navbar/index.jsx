@@ -24,26 +24,44 @@ const NavigationBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="nav-collapse">
           <Nav className="me-auto">
-            <Nav.Link className="nav-link" href="/home">
+            <Nav.Link className="nav-link" onClick={() => handleClick("/home")}>
               Home
             </Nav.Link>
-            <Nav.Link className="nav-link" href="/about">
-              Store
+            <Nav.Link
+              className="nav-link"
+              onClick={() => handleClick("/courses")}
+            >
+              Courses
             </Nav.Link>
-            <Nav.Link className="nav-link" href="/about">
+            <Nav.Link
+              className="nav-link"
+              onClick={() => handleClick("/about")}
+            >
               About
             </Nav.Link>
-            <Nav.Link className="nav-link" href="/login">
+            <Nav.Link
+              className="nav-link"
+              onClick={() => handleClick("/login")}
+            >
               Login
             </Nav.Link>
-            <Nav.Link className="nav-link" href="/register">
+            <Nav.Link
+              className="nav-link"
+              onClick={() => handleClick("/register")}
+            >
               Sign Up
             </Nav.Link>
             <NavDropdown title="Account" id="basic-nav-dropdown">
-              <NavDropdown.Item className="nav-droplink">
+              <NavDropdown.Item
+                className="nav-droplink"
+                onClick={() => handleClick("/profile")}
+              >
                 Profile
               </NavDropdown.Item>
-              <NavDropdown.Item className="nav-droplink">
+              <NavDropdown.Item
+                className="nav-droplink"
+                onClick={() => handleClick("/settings")}
+              >
                 Settings
               </NavDropdown.Item>
               <NavDropdown.Divider />
