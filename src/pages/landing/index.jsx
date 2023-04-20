@@ -21,12 +21,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 
-const LandingPage = () => {
+const LandingPage = (props) => {
   const [courses, setCourses] = useState([]);
   const navigate = useNavigate();
 
-  const handleClick = (link) => {
-    navigate(link);
+  const handleClick = (link, rowId) => {
+    navigate(link, { state: { id: rowId } });
   };
 
   const handleFetch = () => {
@@ -159,7 +159,10 @@ const LandingPage = () => {
           >
             {courses?.data?.data?.map((row, index) => (
               <SwiperSlide key={index}>
-                <Card className="discoverCard">
+                <Card
+                  className="discoverCard"
+                  onClick={() => handleClick(`/courses/${row.name}`, row.id)}
+                >
                   <CardImg
                     variant="top"
                     src={row.image}
@@ -170,9 +173,9 @@ const LandingPage = () => {
                       {row.name}
                     </Card.Title>
                     <Card.Text></Card.Text>
-                    <Button className="btn">
+                    <h6>
                       <FontAwesomeIcon icon={faArrowRight} className="icon" />
-                    </Button>
+                    </h6>
                   </Card.Body>
                 </Card>
               </SwiperSlide>
