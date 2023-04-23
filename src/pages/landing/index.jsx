@@ -25,8 +25,8 @@ const LandingPage = (props) => {
   const [courses, setCourses] = useState([]);
   const navigate = useNavigate();
 
-  const handleClick = (link, rowId) => {
-    navigate(link, { state: { id: rowId } });
+  const handleClick = (link) => {
+    navigate(link);
   };
 
   const handleFetch = () => {
@@ -161,7 +161,7 @@ const LandingPage = (props) => {
               <SwiperSlide key={index}>
                 <Card
                   className="discoverCard"
-                  onClick={() => handleClick(`/courses/${row.name}`, row.id)}
+                  onClick={() => handleClick(`/courses/${row.id}`)}
                 >
                   <CardImg
                     variant="top"

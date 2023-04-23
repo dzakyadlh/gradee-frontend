@@ -96,7 +96,7 @@
 .landingThird p {
   font-size: 1em;
 }
-.cardCarousel {
+.landingThird .cardCarousel {
   display: flex;
   margin: 0 1vw 20px;
   width: 100%;
