@@ -1,0 +1,64 @@
+.courseDetail h1 {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.courseDetail .trailer-container {
+  width: 100%;
+  margin: 5vh 0;
+}
+
+.courseDetail .perks-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 0 2vh;
+}
+
+.perks-container .rating-container {
+  display: flex;
+  align-items: center;
+}
+
+.perks-container h5 {
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+.perks-container h6 {
+  font-size: 1.2rem;
+  color: #3b444b;
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  line-height: 110%;
+}
+
+.detail-container p {
+  color: rgb(69, 69, 69);
+  margin-bottom: 20px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.mentors-container .cardCarousel {
+  display: flex;
+  margin: 0 20px;
+  width: 100%;
+}
+
+.mentors-container .mentorCard {
+  width: 30vw;
+  height: 30vw;
+  border-radius: 10px;
+}
+
+.mentorCard .cardImg {
+  border-radius: 25px;
+  width: 15vw;
+  height: 15vw;
+}
