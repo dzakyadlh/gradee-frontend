@@ -1,5 +1,11 @@
 .courseDetail h1 {
   font-size: 1.5rem;
+  line-height: 120%;
+  color: black;
+}
+
+.courseDetail h2 {
+  font-size: 1.2rem;
   color: black;
 }
 
@@ -10,15 +16,25 @@
 
 .courseDetail .perks-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
   margin: 0 0 2vh;
+}
+
+.perks-container .titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.perks-container .likeIcon {
+  color: #fb3958;
+  font-size: 1.5rem;
 }
 
 .perks-container .rating-container {
   display: flex;
   align-items: center;
+  margin: 10px 0;
 }
 
 .perks-container h5 {
@@ -35,7 +51,7 @@
   display: flex;
   flex-direction: column;
   text-align: justify;
-  line-height: 110%;
+  line-height: 120%;
 }
 
 .detail-container p {
@@ -45,20 +61,44 @@
   font-size: 1rem;
 }
 
+.mentors-container {
+  margin-bottom: 5vh;
+}
+
 .mentors-container .cardCarousel {
   display: flex;
-  margin: 0 20px;
   width: 100%;
+  margin: 3vh 0;
 }
 
 .mentors-container .mentorCard {
-  width: 30vw;
-  height: 30vw;
+  width: 28vw;
+  height: 20vh;
   border-radius: 10px;
+  padding: 10px 10px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(133, 133, 133);
 }
 
 .mentorCard .cardImg {
-  border-radius: 25px;
-  width: 15vw;
-  height: 15vw;
+  border: 1px solid rgb(133, 133, 133);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.mentors-container .mentorCardTitle {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.mentors-container .mentorCardSubtitle {
+  font-size: 0.5rem;
+  text-align: center;
+  color: rgb(69, 69, 69);
 }
