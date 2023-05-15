@@ -4,6 +4,8 @@
   display: flex;
   justify-content: space-between;
   padding: 5vh 5vw 10vh;
+  position: relative;
+  bottom: 0;
 }
 
 .subfooter {

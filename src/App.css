@@ -15,6 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vw;
+  min-height: 100vh;
   padding: 60px 5vw 0;
 }
 

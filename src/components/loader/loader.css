@@ -1,0 +1,44 @@
+.loader-container {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.loader-container .loadCover {
+  position: absolute;
+  background-color: #f6f1f1;
+  width: 100vw;
+  height: 50vh;
+  border-radius: 50%;
+  transition: 1s ease-in-out;
+}
+
+.loadCover {
+  animation-name: slideIn;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.loader-container .gradee {
+  font-size: 2rem;
+  transition: 0.5s;
+}
+
+@keyframes slideIn {
+  40% {
+    width: 0%;
+  }
+  80% {
+    width: 100%;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    display: grid;
+  }
+  to {
+    display: none;
+  }
+}

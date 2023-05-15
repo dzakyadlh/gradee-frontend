@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
-import { useParams, useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { BigPlayButton, Player } from "video-react";
 import axios from "axios";
 import "./detail.css";
@@ -9,11 +9,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
-import { Button, Card, CardImg, Row, Col } from "react-bootstrap";
+import { Card, CardImg, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar, faHeart } from "@fortawesome/free-solid-svg-icons";
 
+import Loader from "../../components/loader";
 import Navbar from "../../components/navbar";
+import Footer from "../../components/footer";
 
 const CourseDetail = (props) => {
   const [course, setCourse] = useState([]);
@@ -34,7 +36,7 @@ const CourseDetail = (props) => {
         console.log(res.data.status);
         setCourse(res.data.data);
         setDetail(res.data.data.course_detail);
-        console.log(res);
+        console.log(course);
       })
       .catch((err) => {
         console.log(err.response.data.status);
@@ -50,20 +52,29 @@ const CourseDetail = (props) => {
       <Navbar />
       <div className="scroll-container courseDetail">
         <div className="trailer-container">
-          <Player
-            ref={(player) => {
-              setPlayer(player);
-            }}
-            poster={course.image}
-            src={course.video}
-            className
-          >
-            <BigPlayButton position="center" />
-          </Player>
+          <div className="video-container">
+            <Player
+              ref={(player) => {
+                setPlayer(player);
+              }}
+              poster={course.image}
+              src={course.video}
+            >
+              <BigPlayButton position="center" />
+            </Player>
+          </div>
         </div>
         <div className="perks-container">
-          <h1>{course.name}</h1>
-          <div className="rating-container">
+          <Row className="titleRow">
+            <Col>
+              <h1>{course.name}</h1>
+            </Col>
+            <Col xs={1}>
+              <FontAwesomeIcon icon={faHeart} className="likeIcon" />
+            </Col>
+          </Row>
+
+          {/* <div className="rating-container">
             <h6>4.9</h6>
             <h5 className="rating">
               <FontAwesomeIcon
@@ -72,35 +83,37 @@ const CourseDetail = (props) => {
                 className="icon"
               />
             </h5>
-          </div>
+          </div> */}
         </div>
         <div className="detail-container">
           <p>{detail.description}</p>
           <p>{detail.overview}</p>
         </div>
-        <div className="material-container"></div>
+        <div className="materials-container"></div>
         <div className="mentors-container">
+          <h2>Our Mentors</h2>
           <Swiper
             slidesPerView={3}
             spaceBetween={10}
-            centeredSlides={true}
             pagination={{ clickable: true }}
             modules={[Pagination]}
             className="cardCarousel"
           >
-            {course?.data?.data?.map((row, index) => (
+            {course?.course_mentors?.map((row, index) => (
               <SwiperSlide key={index}>
                 <Card className="mentorCard" onClick={() => handleClick(`/`)}>
                   <CardImg
-                    variant="top"
                     src={row.image}
                     className="cardImg"
                     alt="Mentor Picture"
                   ></CardImg>
                   <Card.Body>
                     <Card.Title className="mentorCardTitle">
-                      Qwerty, Ph.D
+                      {row.name}
                     </Card.Title>
+                    <Card.Subtitle className="mentorCardSubtitle">
+                      {row.job} at Gradee
+                    </Card.Subtitle>
                   </Card.Body>
                 </Card>
               </SwiperSlide>
@@ -108,6 +121,7 @@ const CourseDetail = (props) => {
           </Swiper>
         </div>
       </div>
+      <Footer />
     </React.Fragment>
   );
 };
