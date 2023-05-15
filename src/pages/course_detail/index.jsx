@@ -13,6 +13,7 @@ import { Card, CardImg, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faHeart } from "@fortawesome/free-solid-svg-icons";
 
+import Loader from "../../components/loader";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 
@@ -51,16 +52,17 @@ const CourseDetail = (props) => {
       <Navbar />
       <div className="scroll-container courseDetail">
         <div className="trailer-container">
-          <Player
-            ref={(player) => {
-              setPlayer(player);
-            }}
-            poster={course.image}
-            src={course.video}
-            className
-          >
-            <BigPlayButton position="center" />
-          </Player>
+          <div className="video-container">
+            <Player
+              ref={(player) => {
+                setPlayer(player);
+              }}
+              poster={course.image}
+              src={course.video}
+            >
+              <BigPlayButton position="center" />
+            </Player>
+          </div>
         </div>
         <div className="perks-container">
           <Row className="titleRow">
